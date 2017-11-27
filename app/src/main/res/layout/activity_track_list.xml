@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.upc.eetac.dsa.listviewfromretrofit.TrackList">
+
+    <TextView
+        android:id="@+id/tvTitleList"
+        android:layout_width="214dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:text="@string/track_listv"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ListView
+        android:id="@+id/lvTrackList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

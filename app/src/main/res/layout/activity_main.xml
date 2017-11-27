@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="edu.upc.eetac.dsa.listviewfromretrofit.MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/cap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="28dp"
+        android:text="-- Tracks --"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_get_track"
+        android:text="Obtenir últim Track"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickGetTrack"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="66dp" />
+
+    <EditText
+        android:id="@+id/etTrackId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Track Id"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/btn_get_track"  />
+
+    <EditText
+        android:id="@+id/etCantant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Cantant"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/etTrackId"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/etTitol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/etCantant"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="73dp"
+        android:layout_toEndOf="@id/etCantant"
+        android:hint="Títol" />
+
+
+
+    <Button
+        android:id="@+id/btn_new_track"
+        android:text="Afegir un Track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickNewTrack"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/etCantant" />
+
+    <Button
+        android:id="@+id/btn_track_by_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etTitol"
+        android:layout_marginTop="38dp"
+        android:layout_toEndOf="@+id/cap"
+        android:onClick="onClickGetTrackById"
+        android:text="Obtenir Track per Id (999 per tots)" />
+
+    <Button
+        android:id="@+id/btn_del_by_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickDelTrackById"
+        android:text="Esborrar un Track"
+        android:layout_below="@+id/btn_new_track"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+         />
+
+</RelativeLayout>
